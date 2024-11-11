@@ -1,0 +1,50 @@
+
+# node modules
+node_modules/
+# (default vite build output)
+dist/
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+# Local environment files
+.env
+.env.local
+.env.*.local
+# Vite cache
+.vite/
+# Mac system files
+.DS_Store
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# IDE Specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+#SASS cache files
+.sass-cache/
+
+# coverage reports
+coverage/
+#Cache folder
+.alcache/
+#Symbols folder
+.alpackages/
+#Snapshots folder
+.snapshots/
+#Testing Output folder
+.output/
+#Extension App-file
+*.app
+#Rapid Application Development File
+rad.json
+#Translation Base-file
+*.g.xlf
+#License-file
+*.flf
+#Test results file
+TestResults.xml
+

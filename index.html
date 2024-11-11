@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="main.js" type="module" defer></script>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2 class="text-center" id="form-title">Log In</h2>
+
+            <form id="login-form" action="/profile.html" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="Enter your email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required minlength="8" placeholder="Enter your password" />
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                </div>
+
+                <div class="form-group text-center">
+                    <p>Don't have an account? <a href="#" id="toggle-form" class="text-primary">Register here</a></p>
+                </div>
+            </form>
+
+            <form id="register-form" action="/profile.html" method="POST" novalidate style="display: none;">
+                <div class="form-group">
+                    <label for="username-register">Username</label>
+                    <input type="text" id="username-register" name="username" class="form-control" required placeholder="Enter your username" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email-register">Email address</label>
+                    <input type="email" id="email-register" name="email" class="form-control" required placeholder="Enter your email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password-register">Password</label>
+                    <input type="password" id="password-register" name="password" class="form-control" required minlength="8" placeholder="Enter your password" />
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" required minlength="8" placeholder="Confirm your password" />
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </div>
+
+                <div class="form-group text-center">
+                    <p>Already have an account? <a href="#" id="toggle-to-login" class="text-primary">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

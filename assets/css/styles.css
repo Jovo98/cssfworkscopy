@@ -1,0 +1,439 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 0;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.auth-card {
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+input.form-control {
+  padding: 0.75rem;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+button.btn-primary {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.875rem;
+}
+button.btn-primary:hover {
+  background-color: #217dbb;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  font-size: 0.875rem;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+small.form-text {
+  font-size: 0.85rem;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.profile-card {
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.username {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.follow-btn {
+  padding: 0.6rem;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+.follow-btn:hover {
+  background-color: #217dbb;
+}
+
+.follow-info {
+  margin-bottom: 20px;
+}
+
+.follow-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.follow-info strong {
+  font-weight: bold;
+}
+
+.user-posts {
+  text-align: left;
+}
+
+.user-posts h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post p {
+  margin: 5px 0;
+}
+
+.post strong {
+  color: #333;
+}
+
+.feed-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feed-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.feed-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feed-header .header-actions .search-bar {
+  display: flex;
+  gap: 10px;
+}
+.feed-header .header-actions .search-bar input.form-control {
+  width: 250px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.feed-header .header-actions .search-bar .btn-primary.search-btn,
+.feed-header .header-actions .search-bar .btn-primary.create-post-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.feed-header .header-actions .search-bar .btn-primary.search-btn:hover,
+.feed-header .header-actions .search-bar .btn-primary.create-post-btn:hover {
+  background-color: #217dbb;
+}
+.feed-header .sort-options {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feed-header .sort-options label {
+  margin: 0;
+  font-weight: bold;
+}
+.feed-header .sort-options select.form-control {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.post-card .post-thumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.post-card .post-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.post-card .post-content .post-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.post-card .post-content .post-excerpt {
+  margin: 0 0 10px;
+}
+.post-card .post-content .btn-secondary {
+  padding: 8px 16px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 20%;
+}
+.post-card .post-content .btn-secondary:hover {
+  background-color: #b3b3b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.modal-content .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3498db;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.navbar .navbar-container {
+  display: flex;
+  gap: 15px;
+}
+.navbar .nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.navbar .nav-item:hover {
+  background-color: #217dbb;
+}
+.navbar .logout-btn {
+  background-color: #75b9e7;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.navbar .logout-btn:hover {
+  background-color: #4aa3df;
+}
+
+@media screen and (max-width: 600px) {
+  .auth-card {
+    width: 90%;
+    padding: 15px;
+  }
+  input.form-control {
+    height: 32px;
+    font-size: 0.75rem;
+  }
+  button.btn-primary {
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  label {
+    font-size: 0.85rem;
+  }
+  .profile-card {
+    width: 90%;
+    padding: 15px;
+  }
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  .follow-btn {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+  .user-posts h3 {
+    font-size: 18px;
+  }
+  .post {
+    padding: 12px;
+  }
+  .follow-info p {
+    font-size: 0.85rem;
+  }
+  .feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .feed-header .header-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .feed-header .header-actions .search-bar {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .feed-header .header-actions .search-bar input.form-control {
+    width: 100%;
+  }
+  .feed-header .sort-options {
+    justify-content: flex-start;
+  }
+  .navbar {
+    padding: 8px 15px;
+  }
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-item {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

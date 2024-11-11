@@ -1,0 +1,484 @@
+$primary-color: #3498db;
+$background-color: #f4f4f4;
+$profile-image-size: 150px;
+$form-card-width: 400px;
+$form-padding: 20px;
+$form-border-radius: 10px;
+$input-height: 40px;
+$button-padding: 0.6rem;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  padding: 0;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.auth-card {
+  background-color: white;
+  width: $form-card-width;
+  padding: $form-padding;
+  border-radius: $form-border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+input.form-control {
+  padding: 0.75rem;
+  height: $input-height;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+
+button.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: $button-padding;
+  height: $input-height;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  font-size: 0.875rem;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+small.form-text {
+  font-size: 0.85rem;
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.profile-card {
+  background-color: white;
+  width: $form-card-width;
+  padding: $form-padding;
+  border-radius: $form-border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: $profile-image-size;
+  height: $profile-image-size;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.username {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.follow-btn {
+  padding: $button-padding;
+  background-color: $primary-color;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.follow-info {
+  margin-bottom: 20px;
+}
+
+.follow-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.follow-info strong {
+  font-weight: bold;
+}
+
+.user-posts {
+  text-align: left;
+}
+
+.user-posts h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post p {
+  margin: 5px 0;
+}
+
+.post strong {
+  color: #333;
+}
+
+.feed-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.feed-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+
+      input.form-control {
+        width: 250px;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .btn-primary.search-btn,
+      .btn-primary.create-post-btn {
+        padding: 10px 20px;
+        background-color: $primary-color;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+
+  .sort-options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    label {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    select.form-control {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .post-thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .post-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .post-title {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .post-excerpt {
+      margin: 0 0 10px;
+    }
+
+    .btn-secondary {
+      padding: 8px 16px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      max-width: 20%;
+
+      &:hover {
+        background-color: darken(#ccc, 10%);
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary-color;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  .navbar-container {
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .logout-btn {
+    background-color: lighten($primary-color, 15%);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(lighten($primary-color, 15%), 10%);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .auth-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input.form-control {
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  button.btn-primary {
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  label {
+    font-size: 0.85rem;
+  }
+.profile-card {
+  width: 90%;
+  padding: 15px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+}
+
+.follow-btn {
+  padding: 0.5rem;
+  font-size: 14px;
+}
+
+.user-posts h3 {
+  font-size: 18px;
+}
+
+.post {
+  padding: 12px;
+}
+
+.follow-info p {
+  font-size: 0.85rem;
+}
+
+  .feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    .header-actions {
+      flex-direction: column;
+      gap: 10px;
+
+      .search-bar {
+        flex-direction: column;
+        gap: 5px;
+
+        input.form-control {
+          width: 100%;
+        }
+      }
+    }
+
+    .sort-options {
+      justify-content: flex-start;
+    }
+  }
+
+.navbar {
+  padding: 8px 15px;
+}
+
+.navbar-container {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  font-size: 0.875rem;
+  padding: 6px 12px;
+}
+}
